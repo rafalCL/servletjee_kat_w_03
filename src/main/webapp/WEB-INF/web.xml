@@ -21,4 +21,21 @@ http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
         <url-pattern>/serv12</url-pattern>
     </servlet-mapping>
 
+<!--==============    FILTERS START    ==============-->
+    <filter>
+        <filter-name>SetReqRespEncodingFilter</filter-name>
+        <filter-class>pl.coderslab.servletjee.servlet.filter.SetReqRespEncodingFilter</filter-class>
+        <init-param>
+            <param-name>reqRespEncoding</param-name>
+            <param-value>UTF-16</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>SetReqRespEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+<!--==============     FILTERS END     ==============-->
+
+
 </web-app>
