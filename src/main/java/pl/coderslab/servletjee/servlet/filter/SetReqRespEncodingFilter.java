@@ -8,7 +8,7 @@ public class SetReqRespEncodingFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-//        servletRequest.setCharacterEncoding(this.reqRespEncoding);
+        servletRequest.setCharacterEncoding(this.reqRespEncoding);
         servletResponse.setCharacterEncoding(this.reqRespEncoding);
 
         filterChain.doFilter(servletRequest, servletResponse);
